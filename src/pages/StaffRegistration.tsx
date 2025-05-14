@@ -13,7 +13,9 @@ const StaffRegistration: React.FC = () => {
   const [departments, setDepartments] = useState<string[]>([]);
   const [tempData, setTempData] = useState<any>(null);
   const [deptType, setDeptType] = useState<string>();
+  
   const deptTypeList = ["UG Aided", "UG Self Financed", "PG Aided", "PG Self Financed"];
+  const positionList = ["HOD", "Associate Professor", "Assistant Professor"];
   const [form] = Form.useForm();
   const [messageApi, contextHolder] = message.useMessage();
 
@@ -106,6 +108,21 @@ const StaffRegistration: React.FC = () => {
               size="large" 
               disabled={loading}
             />
+          </Form.Item>
+          <Form.Item
+            name="position"
+            rules={[{ required: true, message: 'Please select your department type!' }]}
+          >
+            <Select 
+              placeholder="Select Position" 
+              size="large" 
+              
+              disabled={loading}
+            >
+              {positionList.map((position, index) => (
+                <Option key={index} value={position}>{position}</Option>
+              ))}
+            </Select>
           </Form.Item>
           <Form.Item
             name="departmentType"
