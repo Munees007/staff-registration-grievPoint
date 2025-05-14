@@ -54,7 +54,7 @@ const StaffRegistration: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#1E1E2C]">
+    <div className="flex justify-center items-center min-h-screen bg-[#1E1E2C] p-5">
       
       {contextHolder}
       <Card className="w-full max-w-md p-6 rounded-xl shadow-xl bg-white">
