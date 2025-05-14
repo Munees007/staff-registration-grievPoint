@@ -54,7 +54,7 @@ const StaffRegistration: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <div className="flex justify-center items-center min-h-screen bg-[#1E1E2C]">
       
       {contextHolder}
       <Card className="w-full max-w-md p-6 rounded-xl shadow-xl bg-white">
